@@ -1,0 +1,11 @@
+# 直接依赖（精简版，跨 Windows / Linux / Docker 通用）
+# 只列本项目代码直接 import 的包，间接依赖交给 pip 自动解析
+# 安装：pip install -r requirements.txt
+
+fastapi
+uvicorn[standard]
+sqlmodel
+pymysql
+cryptography
+openai
+python-dotenv
