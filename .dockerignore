@@ -1,0 +1,21 @@
+# 虚拟环境 / 缓存：绝不进镜像
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 本地密钥与配置：在容器/服务器里用环境变量注入，不打进镜像
+.env
+.env.*
+!.env.example
+
+# IDE / 版本控制 / 日志
+.idea/
+.git/
+*.log
+
+# Docker 相关文件本身无需进镜像
+Dockerfile
+docker-compose.yml
+.dockerignore

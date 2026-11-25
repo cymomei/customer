@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    image: customer-m:latest
+    container_name: customer-web
+    # 把本地 .env 的变量注入容器环境（DB_*、DEEPSEEK_* 等）
+    # 注意：.env 不进镜像，靠这里运行时注入；服务器上请单独准备 .env
+    env_file:
+      - .env
+    ports:
+      - "8806:8806"
+    restart: unless-stopped

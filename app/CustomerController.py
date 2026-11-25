@@ -101,7 +101,7 @@ def ai_chat_api(question: str, session: Session = Depends(create_session)):
     return ResponseResult(code=0, msg="回答成功", data=answer)
 if __name__ == "__main__":
 
-    uvicorn.run(app, host="127.0.0.1", port=8806)
+    uvicorn.run(app, host=os.getenv("APP_HOST", "127.0.0.1"), port=int(os.getenv("APP_PORT", "8806")))
 
 
 
