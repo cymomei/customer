@@ -1,6 +1,6 @@
 from sqlmodel import Session, select
 from app.CustomerModels import Customer
-from ai_tools import *
+from app.ai_tools import *
 
 def add_customer_db(customer:Customer,session:Session):
     try:
